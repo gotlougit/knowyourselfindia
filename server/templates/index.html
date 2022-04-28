@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+	<head>
+		<title>Know Yourself, India</title>
+	<script type="text/javascript" defer>
+		function makerequest(requrl,callback) {
+			let req = new XMLHttpRequest();
+			req.open("GET", requrl);
+			req.send();
+			
+			req.onload = (e) => {
+				callback(req);	
+			};
+		}
+
+		let url = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=1&format=json&origin=*&titles={{ article }}";
+
+		makerequest(url, function(req) {
+			let rawres = JSON.parse(req.response);
+			let div = document.querySelector("div");
+			let res = rawres["query"]["pages"];
+			div.innerHTML = "";
+			for (key in res) {
+				let txt = res[key]["extract"];
+				if (typeof txt == "undefined") {
+					div.innerHTML = "Hmm, an error occurred";
+				} else if (txt.includes("limit report")) {
+					div.innerHTML = "Rate limited by Wikipedia";
+				}
+				div.innerHTML += txt;
+			}
+		});
+
+	</script>
+	</head>
+	<body>
+		<div></div>
+		<a href="https://en.wikipedia.org/wiki/{{ article }}" target="_blank">Learn more</a>
+		</br>
+		<a href="/report?article={{ article }}">Uninteresting or inappropriate fact</a>
+	</body>
+</html>
