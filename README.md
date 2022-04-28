@@ -15,3 +15,23 @@ When a user loads the website, the backend simply selects a random article title
 In the final build, the extracts will likely be cached as by that point of time, there will be so little articles the cost of doing so is fairly low. This also helps avoid Wikipedia rate limiting users, and gives more control to us to control resource usage and improve user experience.
 
 Note: the dump I used to obtain all the Wikipedia articles can be found [here](https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-all-titles-in-ns0.gz)
+
+## Acknowledgements
+
+Thanks to the Hackshetra 2022 organizers for holding such an event; it was certainly an amazing experience, and I look forward to the next session
+
+Thanks especially to Wikipedia for being such an open and useful source of information to all. The amount of metadata and API access they offer is simply mind-boggling.
+
+## TODO
+
+- Migrate the list of articles to a proper database for easy removal, querying and filtering
+
+- Clean up JavaScript code; it's just embedded in the HTML page for now
+
+- Use POST to send reports against certain articles instead of GET
+
+- Make the website look good
+
+- Fetch images for certain articles
+
+- Cache all this info so we don't end up wasting Wikipedia's bandwidth
