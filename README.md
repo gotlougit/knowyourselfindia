@@ -24,7 +24,7 @@ Thanks especially to Wikipedia for being such an open and useful source of infor
 
 ## TODO
 
-- Migrate the list of articles to a proper database for easy removal, querying and filtering
+- Migrate the list of articles to a proper database for easy removal, querying and filtering and cache all this info so we don't end up wasting Wikipedia's bandwidth
 
 - Clean up JavaScript code; it's just embedded in the HTML page for now
 
@@ -34,4 +34,6 @@ Thanks especially to Wikipedia for being such an open and useful source of infor
 
 - Fetch images for certain articles
 
-- Cache all this info so we don't end up wasting Wikipedia's bandwidth
+- Add proper code to update database periodically to get more up to date info, and crawl more URLs as well
+
+
