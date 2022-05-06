@@ -12,5 +12,6 @@ with open("table.json") as f:
             for r in results:
                 newr =  'href="https://en.wikipedia.org' + r[7:-2] + '"'
                 i = i.replace(r, newr)
+            print(i)
         except:
             continue
