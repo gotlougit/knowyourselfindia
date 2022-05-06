@@ -1,8 +1,11 @@
-import random 
+import random
 
-f = open("india")
-articles = f.readlines()
-l = len(articles)
+with open("tables.json") as f:
+    articles = f.readlines()
+
+    l = len(articles)
 
 def getArticle():
-    return articles[random.randint(0,l)][:-1]
+    x = articles[random.randint(0,l)][:-1]
+    print(x)
+    return x
