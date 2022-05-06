@@ -2,6 +2,8 @@ server/env/
 crawler/env/
 server/__pycache__/
 crawler/__pycache__/
+crawler/trash/
+server/trash/
 enwiki-latest-all-titles-in-ns0*
 notes.md
 crawler/*.json
