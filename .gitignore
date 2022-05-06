@@ -4,3 +4,4 @@ server/__pycache__/
 crawler/__pycache__/
 enwiki-latest-all-titles-in-ns0*
 notes.md
+crawler/*.json
