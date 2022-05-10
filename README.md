@@ -12,11 +12,11 @@ My solution was to create a small website which loads in a random fun fact or tr
 
 The backend will have two components: a crawler and a web server.
 
-The crawler will (as is evident) crawl Wikipedia for India-related pages. The output of the Wikipedia API will need to be processed to remove useless sections (for our purposes, anyway), like References, and those [edit]() URLs too. The links are all relative to Wikipedia as well, which is also something to be fixed.
+The crawler will (as is evident) crawl Wikipedia for India-related pages. The output of the Wikipedia API is then processed to remove useless sections (for our purposes, anyway), like References, and those [edit]() URLs too. The links are all relative to Wikipedia as well, which is also something that gets fixed.
 
 The crawler just dumps its output to a text file for now, but it will eventually be stored in a database, which will allow easier querying and faster handling of huge amounts of pages.
 
-The web server (run using Flask) will then fetch a random page and display it to the user, along with some stylish CSS to jazz the page up!
+The web server (run using Flask) will then fetch a random page and display it to the user, along with some stylish CSS to jazz the page up! This is the least developed part of the website for now, as the output of the API needs to be processed completely. Many pages and sections will most likely be removed due to them being irrelevant.
 
 Not much processing will be done client-side for now.
 
