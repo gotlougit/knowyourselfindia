@@ -18,7 +18,7 @@ The output of loader.py is saved in ```tables.json```, so named because primaril
 
 This script just goes through every record saved inside ```table.json``` and cleans it up.
 
-Right now, it just fixes certain links so they point correctly to Wikipedia.
+It removes References links, edit boxes, citation superscripts, and fixes most (if not all) links so they point to Wikipedia correctly.
 
 ### WARNING:
 It DOES NOT SAVE ITS OUTPUT ANYWHERE, it just prints it to STDOUT
