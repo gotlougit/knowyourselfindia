@@ -16,16 +16,16 @@ with open("table.json") as f:
         i = i.encode().decode("unicode-escape")
         #regex substitution
         try:
-            results = re.findall(r'href=\\"[A-Za-z0-9&?=$#%.-_:/;]*\\"', i)
+            results = re.findall(r'href="[A-Za-z0-9&?=$#%.-_:/;]*"', i)
             for r in results:
-                newr =  'href="https://en.wikipedia.org' + r[7:-2] + '"'
+                newr =  'href="https://en.wikipedia.org/' + r[7:-2] + '"'
                 i = i.replace(r, newr)
             
             soup = BeautifulSoup(i, features="html.parser")
             
-            divClasses = ['\\"mw-references-wrap\\"', '\\"mw-references-wrap', '\\"mw-editsection\\"']
-            spanClasses = ['\\"mw-editsection\\"']
-            supClasses = ['\\"reference\\"']
+            divClasses = ['mw-references-wrap', 'mw-references-wrap', 'mw-editsection']
+            spanClasses = ['mw-editsection']
+            supClasses = ['reference']
         
             decomposeClasses("div", divClasses, soup)
             decomposeClasses("span", spanClasses, soup)
