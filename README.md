@@ -34,6 +34,4 @@ Thanks especially to Wikipedia for being such an open and useful source of infor
 
 - Make the website look good
 
-- Fetch images for certain articles
-
 - Add proper code to update database periodically to get more up to date info, and crawl more URLs as well
