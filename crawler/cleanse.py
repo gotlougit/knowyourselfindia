@@ -18,7 +18,7 @@ with open("table.json") as f:
         try:
             results = re.findall(r'href="[A-Za-z0-9&?=$#%.-_:/;]*"', i)
             for r in results:
-                newr =  'href="https://en.wikipedia.org/' + r[7:-2] + '"'
+                newr =  'href="https://en.wikipedia.org/' + r[7:-1] + '"'
                 i = i.replace(r, newr)
             
             soup = BeautifulSoup(i, features="html.parser")
